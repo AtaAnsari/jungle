@@ -6,14 +6,6 @@
   <% if enhanced_cart.length > 0 %>
     <div class="panel panel-default items">
       <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th colspan="2">Product</th>
-            <th>Unit Price</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-        </thead>
         <tbody>
           <% enhanced_cart.each do |item| %>
             <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>

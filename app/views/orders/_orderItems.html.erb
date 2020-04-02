@@ -1,0 +1,27 @@
+
+
+<tr>
+<td>
+<img><%= image_tag product.image.url%><img>
+</td>
+<td>
+<h4><%= product.name %></h4>
+<p><%= product.description %></p>
+</td>
+<td>
+<p> <%= humanized_money_with_symbol line_item.total_price_cents/ 100 %></p>
+</td>
+<td>
+
+<p> <%= line_item.quantity %></p>
+</td>
+<td>
+<p> <%= humanized_money_with_symbol  line_item.quantity * line_item.total_price_cents/ 100  %></p>
+</td>
+</tr>
+  
+<style> 
+  img {
+    max-width: 300px;
+  }
+</style>  
