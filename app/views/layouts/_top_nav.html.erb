@@ -40,6 +40,7 @@
           <ul class="dropdown-menu">
             <li><%= link_to 'Dashboard', [:admin, :root] %></li>
             <li><%= link_to 'Products',  [:admin, :products] %></li>
+            <li><%= link_to 'Categories',  [:admin, :categories] %></li>
           </ul>
         </li>
         <li>
@@ -47,7 +48,22 @@
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
         </li>
+        <% if current_user %>
+        
+        <li class= signed-in-as>Signed in as <%= current_user.name %> <li><%= link_to "Logout", '/logout' %></li>
+<% else %>
+<li><%= link_to 'Login', '/login' %></li> <li><%= link_to 'Sign up', '/signup' %></li>
+<% end %>
+</li>
       </ul>
     </div>
   </div>
 </nav>
+
+
+<style>
+.signed-in-as{
+  padding-top: 15px;
+  color: rgba(94,94,94,0.9)
+}
+</style>
