@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
+
+RSpec.feature "ProductDetails", type: :feature do
 
   # SETUP
   before :each do
@@ -14,7 +15,6 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
         quantity: 10,
         price: 64.99
       )
-      
     end
   end
 
@@ -24,10 +24,10 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
     # ACT
     visit root_path
 
-    # DEBUG
-    save_screenshot
+    first(:xpath, "//a[@href='/products/1']").click
+    puts page.html 
 
-    # VERIFY
-    expect(page).to have_css 'article.product', count: 10
+    # # VERIFY
+    expect(page).to have_css '.products-show', count: 1
   end
 end
