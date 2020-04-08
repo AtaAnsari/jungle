@@ -31,7 +31,7 @@
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
-       <li class="dropdown">
+      <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 
             <span class="text-danger"><%= fa_icon 'lock', text: 'Admin' %></span>
@@ -51,10 +51,10 @@
         <% if current_user %>
         
         <li class= signed-in-as>Signed in as <%= current_user.name %> <li><%= link_to "Logout", '/logout' %></li>
-<% else %>
-<li><%= link_to 'Login', '/login' %></li> <li><%= link_to 'Sign up', '/signup' %></li>
-<% end %>
-</li>
+        <% else %>
+        <li><%= link_to 'Login', '/login' %></li> <li><%= link_to 'Sign up', '/signup' %></li>
+        <% end %>
+        </li>
       </ul>
     </div>
   </div>
@@ -62,8 +62,8 @@
 
 
 <style>
-.signed-in-as{
-  padding-top: 15px;
-  color: rgba(94,94,94,0.9)
-}
+  .signed-in-as{
+    padding-top: 15px;
+    color: rgba(94,94,94,0.9)
+  }
 </style>

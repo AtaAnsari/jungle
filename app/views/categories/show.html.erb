@@ -7,6 +7,10 @@
     </h1>
   </header>
 
+  <div class="well">
+    <%= link_to '+ New Product', [:new, :admin, :product], class: 'btn btn-info' %>
+  </div>
+
   <div class="products">
     <%= render @products %>
   </div>

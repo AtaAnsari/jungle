@@ -7,19 +7,19 @@
 <%= form_tag '/login' do %>
 
   <div class="form-group">
-  <%= label_tag :email %>
-  <%= text_field_tag :email, "", class: 'form-control field-width' %>
+    <%= label_tag :email %>
+    <%= text_field_tag :email, "", class: 'form-control field-width' %>
   </div>
   <div class="form-group">
-  <%= label_tag :password %>
-  <%= password_field_tag :password, "", class: 'form-control field-width' %>
+    <%= label_tag :password %>
+    <%= password_field_tag :password, "", class: 'form-control field-width' %>
   </div>
   <%= submit_tag "Submit", class: 'btn btn-primary' %>
 
 <% end %>
 
 <style>
-.field-width{
-  max-width:20%;
-}
+  .field-width{
+    max-width:20%;
+  }
 </style>

@@ -6,35 +6,33 @@
 
   <div class="order-summary jumbotron">
   <h4>Thank you for your order!</h4>
-<div class="panel panel-default items"> 
-<table class="table table-bordered"> 
-      <thead>
-          <tr>
-            <th colspan="2">Product</th>
-            <th>Unit Price</th>
-            <th>Quantity</th>
-            <th>Item Total</th>
-          </tr>
-        </thead>
-        <tbody>
-    <% @order.line_items.each do |item| %>
-      <%= render 'orderItems', product: Product.find_by(id: item.product_id), line_item: item%>
-    <% end %>
-    </tbody>
+  <div class="panel panel-default items"> 
+    <table class="table table-bordered"> 
+          <thead>
+            <tr>
+              <th colspan="2">Product</th>
+              <th>Unit Price</th>
+              <th>Quantity</th>
+              <th>Item Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @order.line_items.each do |item| %>
+            <%= render 'orderItems', product: Product.find_by(id: item.product_id), line_item: item%>
+            <% end %>
+          </tbody>
     </table> 
-    <h4>
-    Order Total: <%= humanized_money_with_symbol @order.total %>
-    </h4>
-    
-    <h4>
-    Order Email: <%=@order.email%>
-    </h4>
-
-    
   </div>
 
-  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
+  <h4>
+    Order Total: <%= humanized_money_with_symbol @order.total %>
+  </h4>
 
+  <h4>
+    Order Email: <%=@order.email%>
+  </h4>
+  
+  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 </div>
 </section>
 
