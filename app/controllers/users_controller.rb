@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 
   def create
     user = User.new(user_params)
-    puts "HITTING THE CREATE ACTION"
     if user.save
       session[:user_id] = user.id
       redirect_to '/'

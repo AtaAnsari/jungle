@@ -41,7 +41,9 @@
       </div>
     </div>
 <% else %>
-  <div> "Your cart is empty, please add some items to your cart to view them here " </div>
-  <%= link_to 'Home', :root %>
+  <div class="well">
+  "Your cart is empty, please add some items to your cart to view them here "
+  </div>
+  <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 <% end %>
 </section>
