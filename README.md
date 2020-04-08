@@ -23,6 +23,6 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Final Product
 
-!["Mobile version"](https://github.com/AtaAnsari/tweeter/blob/master/docs/mobile.png)
-!["Tablet version"](https://github.com/AtaAnsari/tweeter/blob/master/docs/tablet.png)
-!["Desktop Version"](https://github.com/AtaAnsari/tweeter/blob/master/docs/desktop.png)
+!["All Categories"](https://github.com/AtaAnsari/jungle/blob/master/docs/all%20products.png)
+!["Apparel Category"](https://github.com/AtaAnsari/jungle/blob/master/docs/Apparel%20category.png)
+!["Cart"](https://github.com/AtaAnsari/jungle/blob/master/docs/cart.png)
