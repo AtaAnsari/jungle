@@ -18,9 +18,7 @@ RSpec.feature "ProductDetails", type: :feature do
     end
   end
 
-
-
-  scenario "They see all products" do
+  scenario "They see product detail page after clicking on a product image" do
     # ACT
     visit root_path
     expect(page).to_not have_css '.products-show'
